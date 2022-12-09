@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DCF_ASSIGNMENT_2 || Portfolio</title>
+        <style>
+ .navbar {
+    
+    background-color: #e7b80b;
+   
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+   
+}
+
+.nav-item {
+    list-style: none;
+    float:none;
+    display: inline-block;
+    padding: 15px 45px 15px 20px;
+    position: relative;
+}
+
+.nav-link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-item::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #02891d;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-item:hover::after{
+    width: 100%;
+}
+
+body{
+    background-image: linear-gradient(rgba(177, 64, 243, 0.3),rgba(234, 254, 10, 0.7))
+}
+        </style>
+    </head>
+    <body>
+ <header class="navbar">      
+<div class="nav-menu">
+    <div class="menu">
+        <ul class="nav-links">
+            <li class="nav-item"><a class="nav-link" href="#about">HTTP</a></li>
+            <li class="nav-item"><a class="nav-link" href="#importance">IMPORTANCE OF HTTP</a></li>
+            <li class="nav-item"><a class="nav-link" href="#members">CONTRIBUTING MEMBERS</a></li>
+        </ul>
+    </div>
+</div></header>
+<br>
+
+<br><section class="about" id="about">
+    <h1>HYPER TEXT TRANSFER PROTOCOL<br>
+        ================================
+    </h1>
+    <p>
+       
+Introduction:<br>
+The Hypertext Transfer Protocol (HTTP) is an application layer protocol of the internet protocol suite that is primarily used for distribution and collaboration.<br><br>
+It works as the foundation of data communication for the World Wide Web.<br>
+Tim Berners-Lee started the creation of HTTP at CERN in 1989, and in a straightforward document titled HTTP Protocol Version 0.9, he described how a client and a server behaved. A web browser may be the client whereas a process, named web server, running on a computer that may be hosting more than one website may be the server.<br> 
+This report is organized in sections explaining the following topics of HTTP. <br>
+•	Message Type<br>
+•	Message Sequence<br>
+•	Message Syntax<br>
+•	Type of Connection<br>
+The design of HTTP was made to help improve or establish connections between clients and servers. To improve response time, websites that normally have high traffic use web cache servers. To lessen network traffic, web browsers cache previously used web resources and reuse them whenever possible. By relaying messages with external servers, HTTP proxy servers at private network boundaries can make it easier for clients without a globally routable address to communicate.<br>
+The Internet protocol suite's framework served as the foundation for the design of HTTP, an application layer protocol. Since Transmission Control Protocol (TCP) is widely used, its definition presupposes an underlying and dependable transport layer protocol. On the other hand, HTTP can be modified to use shaky protocols like the User Datagram Protocol (UDP), for instance in HTTPU and Simple Service Discovery Protocol (SSDP).<br>
+The term hypertext was first used by Ted Nelson in 1965 while working on the Xanadu Project, which was an inspiration of American engineer Vannevar Brush’s 1930s vision of the microfilm-based information retrieval and management system called “memex” system. The original HTTP was invented at CERN by Tim Berners-Lee and his team. First proposed in 1989, the “WorldWideWeb” project was the main reason behind the design of HTTP. The first web server then went live the next year. The protocol used was the GET method which requests a webpage from a server and the response they got back from the server was only as a HTML page.<br>
+Some advantages of HTTP are as follows:<br>
+1.	Addressing: It uses advanced scheme of addressing. In order to be easily recognised on the World Wide Web, it assigns IP addresses with names that are easily recognisable.<br> 
+2.	Flexibility: When an application requires extra features, HTTP has the ability to download add-ons or plugins and display the necessary information. Acrobat Reader and Flash players are examples of these.<br>
+3.	Security: Each file in HTTP is downloaded from a separate connection before being closed. As a result, only one element at a time can be transferred from one webpage to another. As a result, there is less chance of interception during transmission which decreases the risks of getting hacked or getting your data stolen<br>
+4.	Latency: The handshaking process will only occur in HTTP once the connection has been made. As a result, there won't be a handshake after a request. The connection's latency is greatly decreased as a result.<br>
+5.	Accessibility: All HTTP pages are stored in internet caches called “page caches” when a page is loaded for the first time. As a result, the content loads quickly when the page is accessed again.<br>
+Some disadvantages of HTTP are as follows:<br>
+1.	Data Integrity: Since HTTP does not use any encryption techniques, it is possible for someone to change the content. Because of this, HTTP is regarded as an insecure method that can compromise data integrity.<br>
+2.	Data Privacy: Another issue with HTTP connections is privacy. Any hacker who is successful in intercepting the request has access to the entire contents of the web page. Additionally, they have the ability to collect private information like the username and password.<br>
+3.	Server Availability: Clients do not take action to end the connection even after HTTP receives all the data it requires. So, the server won’t be available during this time.<br>
+4.	Administrative Overhead: Multiple connections must be established by an HTTP in order to transmit a web page. The connection experiences administrative overhead as a result.<br>
+<br>
+<br>
+5.	IoT Device Support: HTTP consumes more system resources, which increases power usage. Since today's IoT devices include wireless sensor networks, using HTTP is inappropriate.<br>
+<br>
+<br>
+HTTP Messages: <br>
+Data is transferred between a server and a client using HTTP messages. There are two kinds of messages: requests, which the client sends to the server to cause an action, and responses, which the server provides in response.<br> 
+HTTP-Requests:<br>
+In the form of a request message an HTTP client sends the following HTTP request to a server. It consists of a request-line. Then a zero or more header header (General|Request|Entity) fields followed by CRLF. Then an empty line followed by the indication of the end of the header fields. Then the last thing is a optional message body.<br>
+GET,HEAD,POST,PUT,DELEETE,CONNECT,OPTIONS,TRACE are all the methods of request supported in HTTP/1.1.<br>
+HTTP-Responses:<br>
+A server responds with an HTTP response message after receiving and analysing a request message. First is the status-line which consists of the protocol version, a numeric status code, and a textual phrase that goes with it. The elements of the message line are separated by space SP characters.<br>
+The following 3-digit integer define the different classes of responses. <br>
+1.	1xx: Information<br>
+2.	2xx: Success<br>
+3.	3xx: Redirection<br>
+4.	4xx: Client Error<br>
+5.	5xx: Server Error<br>
+HTTP  messages are made from textual information encoded in ASCII, and spans over multiple lines. These textual HTTP messages are rarely crafted by web developers: software, web browser, proxy or Web server performs this action. <br>
+HTTP Message Sequence:<br>
+HTTP messages are formed by materials that are appropriate to its type.<br>
+When an HTTP Input node receives a request for input or when an HTTP Request node receives a response from a web service, the bit stream's headers and body are parsed and represented within the message tree.<br>
+When the HTTP Reply node sends a response to the client or when the HTTP Request node sends a message, parsers construct a bit stream from the relevant portions of the message tree.<br> 
+<br>
+Message Syntax:<br>
+The message syntax for request status-line is as follows:<br>
+Request-Line = Method SP Request-URI SP HTTP-Version CRLF<br>
+The message syntax for response status-line is as follows:<br>
+Status-Line = HTTP-Version SP Status-Code SP Reason-Phrase CRLF<br>
+<br>
+HTTP connection types:<br>
+<br>The two main connection types of HTTP are persistent and non-persistent. The non-persistent connection has connection type 1.0 whereas the persistent connection has connection type 1.1.
+<br>Persistent: A persistent connection requires just one RTT to establish the connection before allowing the transfer of any number of objects.
+<br>Non-persistent: The non-persistent connection requires 2RTT plus file transmission time in total. The first RTT (round-trip time) is needed to establish the connection between the client and server. To request and return the object, a second RTT is required. This example exemplifies the transmission of a single object.
+<br>
+Conclusion:<br>
+Remember that HTTP is a "stateless" protocol, which means that every command is executed independently of every other command. Each HTTP request opened and closed a TCP connection according to the original specification. Multiple HTTP requests may be sent over a persistent TCP connection in more recent versions of the HTTP protocol (HTTP 1.1 and above), which improves resource usage. Large HTTP requests are regarded as application layer attacks or layer 7 attacks in the context of DoS or DDoS attacks and can be used to launch an attack on a target device.<br>
+<br>
+<br>
+<br>
+Reference<br>
+1.	Hypertext Transfer Protocol. Retrieved from WIKIPEDIA<br>
+https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol<br>
+2.	HTTP messages. Retrieved from tutorialpoints. https://www.tutorialspoint.com/http/http_messages.htm<br>
+</p>
+</section>
+
+<section class="importance" id="importance">
+<h2>IMPORTANCE OF HTTP:<br>
+    --------------------------------------<br>
+</h2>
+<p>
+    <ul>
+        <li>
+            • HTTP is the underlying protocol used by the World Wide Web.<br>
+• HTTP is a request-response protocol used by clients and servers to communicate.<br>
+• HTTP is used to transmit hypertext documents, images, videos, and other web-based content.<br>
+• HTTP is a reliable, efficient and secure way to send data between web servers and clients.<br>
+• HTTP is a stateless protocol, meaning that each request is independent of any other requests.<br>
+• HTTP is the most widely used protocol for communication between web servers and clients.<br>
+• HTTP enables the web browser to access web pages on the Internet.<br>
+• HTTP facilitates the transmission of large files over the web.<br>
+• HTTP is used to authenticate users and control access to web pages and data.<br>
+• HTTP enables web applications to interact with other web applications and databases.<br>
+• HTTP provides an efficient way to transmit data between different parts of an application.<br>
+• HTTP is used to encode data before transmission and decode data after receipt.<br>
+• HTTP is used to compress web pages and reduce their size before transmission.<br>
+• HTTP is used to encrypt data to protect it from unauthorized access.<br>
+• HTTP is used to manage cookies and other session data.<br>
+• HTTP is used to track<br>
+        </li>
+    </ul>
+</p>
+</section>
+<section class="members" id="members">
+    <h2>CONTRIBUTING MEMBERS<br>
+        ---------------------------------------<br>
+    </h2>
+    
+           <h3>Mahamad Mustapha</h3>
+            <p>Responsible for developing the web page<br></p>
+        
+            <h3>Garjan raj gosain</h3>
+            <p>Responsible for developing report on http<br></p>
+        
+</section>
+
+    </body>
+</html>
